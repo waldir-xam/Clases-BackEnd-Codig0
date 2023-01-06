@@ -1,4 +1,10 @@
 from app.models.base import BaseModel
+from sqlalchemy import Column, Integer
+
 
 class RoleModel(BaseModel):
-  pass
+    __tablename__ = 'roles'
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    name = Column(String(80))
+    status = Column(Boolean, default=True)
