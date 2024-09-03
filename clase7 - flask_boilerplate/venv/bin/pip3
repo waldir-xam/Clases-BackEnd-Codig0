@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/Users/waldir/Desktop/Clases BackEnd/Clases-BackEnd-Codig0/clase7/venv/bin/python3.11" "$0" "$@"
+'''exec' "/home/wallydev/coding/Clases-BackEnd-Codig0/clase7 - flask_boilerplate/venv/bin/python" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re

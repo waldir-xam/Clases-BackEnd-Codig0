@@ -1,23 +1,6 @@
-from psycopg2 import connect
+from app import app, db
+from app import routers
 
-connection = connect(
-    host='localhost',
-    port=5432,
-    database='First_DB',
-    user='postgres',
-    password='ratatrampa'
-)
+from app.models.base import BaseModel
 
-cursor = connection.cursor()
-
-#cursor.execute('SELECT * FROM area')
-#cursor.execute('SELECT version();')
-#fetchone ->debe usarse si se trae un solo registro
-#fetchall -> debe usarse si se trae mas de un registro
-
-#record=cursor.fetchone()
-#print(record)
-
-#Obligatorio cerrar la cesion y la cconexion
-cursor.close()
-connection.close()
+BaseModel.set_session(db.session)
